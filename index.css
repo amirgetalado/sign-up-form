@@ -88,6 +88,7 @@ form{
     grid-template-columns: repeat(2, 1fr);
     padding: 30px 50px;
     place-items: center;
+    gap:15px;
 }
 .inputs{
     display:flex;
@@ -125,7 +126,7 @@ input[type="email"],
 input[type="password"],
 input[type="tel"]{
     display:block;
-    width: 250px;
+    width: 100%;
 }
 /* form end */
 
