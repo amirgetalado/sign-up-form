@@ -1,6 +1,8 @@
 :root{
-    --main-theme-color:white;
-    --secondary-color:white;
+    --main-theme-color:rgb(180, 251, 246);
+    --secondary-color:rgb(220, 247, 255);
+
+    --font-main-color: rgb(83, 83, 83);
 }
 *, *:before, *:after {
     box-sizing: border-box;
@@ -43,13 +45,7 @@ body{
 }
 
 
-aside,
-main,
-footer,
-h1{
-    border:1px solid rgb(224, 98, 98);
-    margin:0;
-}
+
 
 main{
     display:grid;
@@ -75,6 +71,8 @@ h1{
     align-items: center;
     padding:0 50px;
     text-align: center;
+    background: var(--main-theme-color);
+    margin:0;
 }
 /* form start */
 form{
@@ -89,12 +87,14 @@ form{
     padding: 30px 50px;
     place-items: center;
     gap:15px;
+    background-color: var(--secondary-color);
 }
 .inputs{
     display:flex;
     flex-direction: column;
     gap: 5px;
     font-size: 1rem;
+    color: var(--font-main-color);
 }
 
 .check{
@@ -104,7 +104,9 @@ form{
     line-height: 0px;
     font-size: .9rem;
 }
-
+a{
+    text-decoration: none;
+}
 .btn{
     margin: 25px auto;
     display:flex; 
@@ -114,6 +116,12 @@ form{
 button{
     padding:5px 20px;
     border-radius: 10px;
+    background: rgb(142, 192, 252);
+    border: var(--main-theme-color);
+    color: rgb(33, 33, 33);
+}
+button:hover{
+    background: rgb(99, 168, 253);
 }
 
 .have-account{
@@ -127,15 +135,28 @@ input[type="password"],
 input[type="tel"]{
     display:block;
     width: 100%;
+    border-radius: 7px;
+    border: 1px solid rgb(226, 223, 223);
 }
+
+input:hover{
+    background: rgb(245, 245, 245);
+}
+
+input:focus{
+    outline:none;
+    background: rgb(245, 245, 245);
+}
+
 /* form end */
 
 footer{
     grid-area:footer;
     display:flex; 
     justify-content: center;
-    align-items: flex-end;
+    align-items: center;
     font-size:.8rem;
+    background: var(--main-theme-color);
 }
 
 
