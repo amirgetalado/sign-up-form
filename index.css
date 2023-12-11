@@ -27,12 +27,16 @@ body{
         display: flex !important;
         flex-direction: column !important;
         flex:3;
+        gap: 15px;
     }
 
     .check{
-        /* margin-top:20px;
-        margin-bottom:0px; */
         line-height: 15px !important;
+        text-align: center;
+    }
+
+    .inputs{
+        gap:2px !important;
     }
    
 }
