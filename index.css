@@ -33,6 +33,7 @@ body{
     .check{
         line-height: 15px !important;
         text-align: center;
+        font-size: .8rem !important;
     }
 
     .inputs{
