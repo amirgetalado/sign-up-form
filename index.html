@@ -36,19 +36,22 @@
             </div>
             <div class="inputs">
                 <label for="pw">PASSWORD</label>
-                <input type="password" id="pw" name="password" required/>
+                <input type="password" id="pw" name="password" required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters"/>
             </div>
             <div class="inputs">
                 <label for="confirm-pw">CONFIRM PASSWORD</label>
-                <input type="password" id="confirm-pw" name="confirm-password" required/>
+                <input type="password" id="confirm-pw" name="confirm-password" required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters"/>
             </div>
             <div class="check">
+
                 <input type="checkbox" id="newsletter" name="newsletter" checked />
                 <label for="newsletter">Subscribe to newsletter and updates</label>
 
                 <p>By signing up, you are agreeing to our <a href="./index.html">Terms & Conditions</a> and <a href="./index.html">Privacy Policy.</a></p>
+
                 <div class="btn"><button type="submit">Sign Up</button></div>
-                <p class="have">Already have an account? <a href="./index.html">Log in</a></p>
+
+                <p class="have-account">Already have an account? <a href="./index.html">Log in</a></p>
             </div>
             
         </form>
