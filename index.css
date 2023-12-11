@@ -1,0 +1,143 @@
+:root{
+    --main-theme-color:white;
+    --secondary-color:white;
+}
+*, *:before, *:after {
+    box-sizing: border-box;
+}
+body{
+    font: 1.2rem "Fira Sans", sans-serif;
+}
+  
+@media only screen and (max-width:600px){
+    
+    aside,
+    main,
+    footer{
+        border:1px solid black;
+    }
+
+    main{
+        display:flex;
+        flex-direction: column;
+        min-height:100vh;
+        align-items: center;
+    }
+    
+    aside{
+        flex:2;
+        background-image: url("./images/1.jpg");
+        width:100%;
+        background-repeat: no-repeat;
+        background-size: contain;
+       
+    }
+    form{
+        flex:3;
+        width:300px;
+    }
+    footer{
+        flex:1;
+        width:100%;
+        display:flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+aside,
+main,
+footer,
+h1{
+    border:1px solid rgb(224, 98, 98);
+    margin:0;
+}
+
+main{
+    display:grid;
+    grid-template-areas:
+        "aside aside h1 h1 h1"
+        "aside aside form form form"
+        "aside aside form form form"
+        "aside aside footer footer footer";
+    grid-template-columns: repeat(5, 1fr);
+    height:100vh;
+}
+
+aside{
+    grid-area: aside;
+    background-image: url("./images/1.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+h1{
+    grid-area:h1;
+    display:flex;
+    align-items: center;
+    padding:0 50px;
+    text-align: center;
+}
+/* form start */
+form{
+    grid-area: form;
+    display:grid;
+    grid-template-areas:
+    "div div"
+    "div div"
+    "div div"
+    "check check";
+    /* "p p"
+    "btn btn"; */
+    grid-template-columns: repeat(2, 1fr);
+    padding: 30px 50px;
+    place-items: center;
+}
+.inputs{
+    display:flex;
+    flex-direction: column;
+    gap: 5px;
+    font-size: 1rem;
+}
+
+.check{
+    grid-area: check;
+    margin-top:20px;
+    margin-bottom:0px;
+    line-height: 0px;
+    font-size: .9rem;
+}
+
+.btn{
+    margin: 25px auto;
+    display:flex; 
+    justify-content: center;
+    font-size: 1.2rem;
+}
+button{
+    padding:5px 20px;
+    border-radius: 10px;
+}
+
+.have{
+    text-align: center;
+    font-size: 1rem;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="tel"]{
+    display:block;
+    width: 250px;
+}
+/* form end */
+
+footer{
+    grid-area:footer;
+    display:flex; 
+    justify-content: center;
+    align-items: flex-end;
+    font-size:.8rem;
+}
+
+
